@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-board {
+  width: 100%;
+  height: 600px;
+  border: 10px solid #333;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#85e3fd, #59c1ff, #3caaff);
+}
+
+.pipe {
+  position: absolute;
+  bottom: 6.1rem;
+  width: 80px;
+
+  animation: pipe-animation 2s infinite linear;
+}
+.mario {
+  width: 150px;
+
+  position: absolute;
+  bottom: 6.1rem;
+}
+.floor {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+}
+.clouds {
+  position: absolute;
+  width: 400px;
+  animation: clouds 10s infinite;
+}
+.jump {
+  animation: jump 500ms ease-out;
+}
+
+@font-face {
+  font-family: "mario";
+  src: url(/fonts/SuperMario256.ttf) format(truetype);
+  font-weight: normal;
+  font-style: normal;
+}
+.contador {
+  font-family: "mario";
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 3em;
+  align-items: center;
+}
+.botao {
+  font-family: "mario";
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0.5rem;
+}
+@keyframes pipe-animation {
+  from {
+    right: 0;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 6.1rem;
+  }
+  40% {
+    bottom: 16rem;
+  }
+  50% {
+    bottom: 16rem;
+  }
+  60% {
+    bottom: 16rem;
+  }
+  100% {
+    bottom: 6.1rem;
+  }
+}
+@keyframes clouds {
+  from {
+    right: -400px;
+  }
+  to {
+    right: 100%;
+  }
+}

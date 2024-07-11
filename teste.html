@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Cliques</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+
+        #contador {
+            font-size: 2em;
+            margin: 20px;
+
+
+
+            font-family: "Honk", system-ui;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "MORF" 15,
+                "SHLN" 50;
+
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contador">0</div>
+    <button id="incrementar">Incrementar</button>
+
+    <script>
+        // Inicializa o valor do contador
+        let contador = 0;
+
+        // Seleciona os elementos do DOM
+        const contadorElemento = document.getElementById('contador');
+        const botaoIncrementar = document.getElementById('incrementar');
+
+        // Adiciona um evento de clique ao botão
+        botaoIncrementar.addEventListener('click', () => {
+            // Incrementa o valor do contador
+            contador++;
+            // Atualiza o conteúdo do elemento de contador
+            contadorElemento.textContent = contador;
+        });
+    </script>
+</body>
+
+</html>
