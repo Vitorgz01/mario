@@ -2,24 +2,21 @@ const mario = document.querySelector(".mario");
 const pipe = document.querySelector(".pipe");
 const contador1 = document.getElementById("contador1");
 
-let contador = 0;
+// contador de pulos
+let contador = 1;
 let jumptime = addEventListener("keydown", () => {
   contador1.textContent = contador;
-  contador++;
+  contador += 1;
+  console.log(contador);
 });
 
+// evento de adicionar o jump no h
 const jump = () => {
   mario.classList.add("jump");
 
   setTimeout(() => {
     mario.classList.remove("jump");
   }, 500);
-
-  addEventListener("keydown", () => {
-    contador1.textContent = contador;
-    contador + 1;
-    console.log(contador);
-  });
 };
 
 const loop = setInterval(() => {
